@@ -5,17 +5,16 @@ def readme():
         return f.read()
 
 
-setup(name='ipyReload',
-      version='0.1',
+setup(
+      name='ipyReload',
+      packages=['ipyReload']
+      version='0.01.00',
       description='rerun an ipython program upon modification',
-      long_description=readme()
-      url='https://github.com/wolfiex/ipython-dev-reload',
-      keywords='ipthon reload',
+      long_description=readme(),
+      url="https://github.com/wolfiex/ipython-dev-reload",
+      keywords= 'ipython reload'.split(' '),
       author='Dan Ellis',
       author_email='daniel.ellis.research@gmail.com',
       license='MIT',
-      packages=['ipyReload'],
-            install_requires=[
-        'IPython',
-      ],
+      install_requires=['IPython'],
       zip_safe=False)

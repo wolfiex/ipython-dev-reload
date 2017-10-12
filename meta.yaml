@@ -1,24 +1,28 @@
 package:
-  name:ipyReload
-  version:0.01.00
+  name: ipyReload
+  version: '0.01.00'
 
 source:
-  git_rev:v0.13.1 
-  git_url:https://github.com/wolfiex/ipython-dev-reload
+  git_rev: 0.01.1 
+  git_url: https://github.com/wolfiex/ipython-dev-reload.git
 
+build:
+  number: 0
+  
 requirements:
   build:
     - python
     - setuptools
+    - IPython
 
   run:
     - python
 
 test:
-  imports:ipyReload
-    -
+  imports:
+      - ipyReload
 
 about:
-  home:
-  license:MIT
-  license_file:LICENSE
+  home: https://github.com/wolfiex/ipython-dev-reload
+  license: MIT
+  license_file: LICENSE
