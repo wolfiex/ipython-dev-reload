@@ -6,9 +6,9 @@ def readme():
 
 
 setup(
-      name='ipyReload',
-      packages=['ipyReload']
-      version='0.01.00',
+      name='ipyreload',
+      packages=['ipyreload'],
+      version= 0.1,
       description='rerun an ipython program upon modification',
       long_description=readme(),
       url="https://github.com/wolfiex/ipython-dev-reload",
@@ -16,5 +16,4 @@ setup(
       author='Dan Ellis',
       author_email='daniel.ellis.research@gmail.com',
       license='MIT',
-      install_requires=['IPython'],
       zip_safe=False)

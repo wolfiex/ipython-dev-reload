@@ -1,9 +1,9 @@
 package:
-  name: ipyReload
-  version: '0.01.00'
+  name: ipyreload
+  version: '0.1'
 
 source:
-  git_rev: 0.01.1 
+  git_rev: 0.1
   git_url: https://github.com/wolfiex/ipython-dev-reload.git
 
 build:
@@ -13,14 +13,13 @@ requirements:
   build:
     - python
     - setuptools
-    - IPython
 
   run:
     - python
 
 test:
   imports:
-      - ipyReload
+      - ipyreload
 
 about:
   home: https://github.com/wolfiex/ipython-dev-reload
