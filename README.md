@@ -2,6 +2,15 @@
 
 Reload files when modified using the ipython magic function %run.
 
+
+## Install 
+https://anaconda.org/wolfiex/ipyreload
+
+		conda install -c wolfiex ipyreload		
+
+
+## Example use:
+
 ```python
 			import ipyReload as ipr
 
