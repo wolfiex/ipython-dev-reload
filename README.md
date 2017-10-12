@@ -29,4 +29,4 @@ Saves on load times for modules/ipython. Provides a fast interactive dev environ
 
 ## Future ideas:
 
-Diff between current and previous file and only run new lines?
+Diff between current and previous file and only run new lines from the start of previous indent?
