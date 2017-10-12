@@ -1,8 +1,8 @@
-# ipython-dev-reload
+# ipyReload
 
 Reload files when modified using the ipython magic function %run.
 
-
+```python
 			import ipyReload as ipr
 
 			#lets follow changes in test.py
@@ -12,7 +12,7 @@ Reload files when modified using the ipython magic function %run.
 			
 			#if we want to stop it auto updating we can kill the thread
 			ipr.kill()
-
+```
 
 ## Uses: 
 
