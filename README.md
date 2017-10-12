@@ -26,3 +26,7 @@ https://anaconda.org/wolfiex/ipyreload
 ## Uses: 
 
 Saves on load times for modules/ipython. Provides a fast interactive dev environment.
+
+## Future ideas:
+
+Diff between current and previous file and only run new lines?
