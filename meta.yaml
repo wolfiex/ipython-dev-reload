@@ -16,10 +16,7 @@ requirements:
 
   run:
     - python
-
-test:
-  imports:
-      - ipyreload
+    - ipython
 
 about:
   home: https://github.com/wolfiex/ipython-dev-reload
