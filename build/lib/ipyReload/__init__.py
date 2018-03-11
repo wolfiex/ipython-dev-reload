@@ -20,18 +20,18 @@ def CheckUpdate(x):
 
 
 def callback(x,call):
+    print call,'ada'
     global filename,finish
     if not finish:
         print '\033[34m Reloading \033[00m' + filename
         try:
             if callable(call):
                 call()
-                watch(filename,call)
+                
             else:
                 ipython.magic("run " + filename)
-                watch(filename)
         except:None
-        
+        watch(filename,call)
     
     
 def watch (filename,call=False):
@@ -39,10 +39,7 @@ def watch (filename,call=False):
     executor = ThreadPoolExecutor(max_workers=1)
     finish = False
     future = executor.submit(CheckUpdate,filename)
-    if callable(call):
-        future.add_done_callback(functools.partial(callback,call)) 
-    else:
-        future.add_done_callback(functools.partial(callback,False))
+    future.add_done_callback(functools.partial(callback,call)) 
     
 
 
