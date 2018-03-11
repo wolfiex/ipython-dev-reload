@@ -4,7 +4,9 @@ from IPython import get_ipython
 ipython = get_ipython()
 
 
-global future,filename,finish,executor
+global future,filename,finish,executor,altfn
+
+altfn=False
 
 
 def CheckUpdate(x):
@@ -19,30 +21,30 @@ def CheckUpdate(x):
 
 
 
-def callback(x,call):
+def callback(x):
+    print altfn,'ada'
     global filename,finish
     if not finish:
         print '\033[34m Reloading \033[00m' + filename
         try:
-            if callable(call):
-                call()
-                watch(filename,call)
+            if callable(altfn):
+                altfn()
+                
             else:
                 ipython.magic("run " + filename)
-                watch(filename)
         except:None
-        
+        watch(filename)
     
     
 def watch (filename,call=False):
-    global future,finish,executor
+    global future,finish,executor,altfn
     executor = ThreadPoolExecutor(max_workers=1)
     finish = False
     future = executor.submit(CheckUpdate,filename)
+    
     if callable(call):
-        future.add_done_callback(functools.partial(callback,call)) 
-    else:
-        future.add_done_callback(functools.partial(callback,False))
+        altfn=call
+    future.add_done_callback(callback) 
     
 
 
