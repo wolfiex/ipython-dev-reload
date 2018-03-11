@@ -20,7 +20,7 @@ def CheckUpdate(x):
 
 
 def callback(x,call):
-    print call,'ada'
+    print call(),'ada'
     global filename,finish
     if not finish:
         print '\033[34m Reloading \033[00m' + filename
