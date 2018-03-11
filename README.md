@@ -23,6 +23,26 @@ https://anaconda.org/wolfiex/ipyreload
 			ipr.kill()
 ```
 
+## Or to use alternative callback functions:
+
+
+
+```python
+			import ipyReload as ipr
+		
+			def callbackfn():
+				print 'hi, do this instead'
+
+			ipr.watch( 'test.py' , callbackfn)
+
+
+```
+
+
+
+
+
+
 ## Uses: 
 
 Saves on load times for modules/ipython. Provides a fast interactive dev environment.
