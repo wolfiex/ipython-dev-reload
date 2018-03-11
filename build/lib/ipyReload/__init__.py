@@ -22,7 +22,6 @@ def CheckUpdate(x):
 
 
 def callback(x):
-    print altfn,'ada'
     global filename,finish
     if not finish:
         print '\033[34m Reloading \033[00m' + filename
