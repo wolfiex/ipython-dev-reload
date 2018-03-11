@@ -26,11 +26,12 @@ def callback(x,call):
         try:
             if callable(call):
                 call()
-                return watch(filename,call)
+                watch(filename,call)
             else:
                 ipython.magic("run " + filename)
+                watch(filename)
         except:None
-        watch(filename)
+        
     
     
 def watch (filename,call=False):
