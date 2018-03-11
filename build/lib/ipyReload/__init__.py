@@ -1,4 +1,4 @@
-import time,os
+import time,os,functools
 from concurrent.futures import ThreadPoolExecutor
 from IPython import get_ipython
 ipython = get_ipython()
@@ -19,21 +19,29 @@ def CheckUpdate(x):
 
 
 
-def callback(x):
+def callback(x,call):
     global filename,finish
     if not finish:
         print '\033[34m Reloading \033[00m' + filename
-        try:ipython.magic("run " + filename)
+        try:
+            if callable(call):
+                call()
+                return watch(filename,call)
+            else:
+                ipython.magic("run " + filename)
         except:None
         watch(filename)
     
     
-def watch (filename):
+def watch (filename,call=False):
     global future,finish,executor
     executor = ThreadPoolExecutor(max_workers=1)
     finish = False
     future = executor.submit(CheckUpdate,filename)
-    future.add_done_callback(callback)
+    if callable(call):
+        future.add_done_callback(functools.partial(callback,call)) 
+    else:
+        future.add_done_callback(functools.partial(callback,False))
     
 
 
