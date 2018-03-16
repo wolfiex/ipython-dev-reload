@@ -59,3 +59,7 @@ def kill():
     
     executor.shutdown(False)  # non-blocking
     print '\033[34m Shutdown invoked \033[00m' + filename
+    ipython.magic("autocall 0")
+    
+def start():
+     ipython.magic("autocall 1")
