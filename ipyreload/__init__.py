@@ -39,6 +39,7 @@ def watch (filename,call=False):
     global future,finish,executor,altfn
     if not os.path.exists(filename): 
         print 'Failed to start: invalid filename'
+        return None
     executor = ThreadPoolExecutor(max_workers=1)
     finish = False
     future = executor.submit(CheckUpdate,filename)
