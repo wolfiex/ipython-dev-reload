@@ -9,8 +9,8 @@ def readme():
 setup(
       name='ipyreload',
       packages=['ipyreload'],
-      version= 0.1,
-      description='rerun an ipython program upon modification',
+      version= 1.1,
+      description='ipython productivity tools',
       long_description=readme(),
       url="https://github.com/wolfiex/ipython-dev-reload",
       keywords= 'ipython reload'.split(' '),
