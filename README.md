@@ -53,7 +53,7 @@ https://anaconda.org/wolfiex/ipyreload
 			(3, "glob='run *'")
 			
 			Enter Selection:
-			4
+			2
 			
 			# command is auto resubmitted
 ```
@@ -61,7 +61,7 @@ https://anaconda.org/wolfiex/ipyreload
 
 ## No need for brackets when calling any functions
 ```python
-			from ipReload import *
+			from ipyReload import *
 			
 			#previous method
 			watch('filename.py')
