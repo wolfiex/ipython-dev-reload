@@ -43,7 +43,8 @@ https://anaconda.org/wolfiex/ipyreload
 
 ## History - resubmit command
 ```python
-			ipr.hist()
+			# glob history for all lines containing run  etc...
+			ipr.hist('run *') 
 			
 			Select command to run from history
 
