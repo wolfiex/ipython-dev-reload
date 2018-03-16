@@ -7,7 +7,7 @@ Reload files when modified using the ipython magic function %run.
 https://anaconda.org/wolfiex/ipyreload
 
 		conda install -c wolfiex ipyreload		
-		pip instal0l git+git://github.com/wolfiex/ipython-dev-reload/
+		pip install --upgrade git+git://github.com/wolfiex/ipython-dev-reload/
 
 
 ## Example use:
