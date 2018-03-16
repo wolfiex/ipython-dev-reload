@@ -7,7 +7,7 @@ Reload files when modified using the ipython magic function %run.
 https://anaconda.org/wolfiex/ipyreload
 
 		conda install -c wolfiex ipyreload		
-		pip install git+git://github.com/wolfiex/ipython-dev-reload/
+		pip instal0l git+git://github.com/wolfiex/ipython-dev-reload/
 
 
 ## Example use:
@@ -41,8 +41,39 @@ https://anaconda.org/wolfiex/ipyreload
 
 
 
+## History - resubmit command
+```python
+			ipr.hist()
+			
+			Select command to run from history
+
+			(0, 'run other.py')
+			(1, 'run test.py')
+			(2, 'run tst.py')
+			(3, "glob='run *'")
+			
+			Enter Selection:
+			4
+			
+			# command is auto resubmitted
+```
 
 
+## No need for brackets when calling any functions
+```python
+			from ipReload import *
+			
+			#previous method
+			watch('filename.py')
+			
+			start()
+			
+			#new method - works for all functions you have
+			watch filename.py
+			
+			
+
+```			
 
 ## Uses: 
 
