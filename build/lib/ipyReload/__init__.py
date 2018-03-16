@@ -69,7 +69,7 @@ def hist(glob = 'run *'):
     print 'Select command to run from history'
     for i in enumerate(matches):
         print i 
-   return eval( matches[int(input('Enter Selection:\n').strip())])     
+    return eval( matches[ int(input('Enter Selection:\n').strip())])     
     
     
 def start():
