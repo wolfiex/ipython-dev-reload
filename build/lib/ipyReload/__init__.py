@@ -24,7 +24,7 @@ def CheckUpdate(x):
 def callback(x):
     global filename,finish
     if not finish:
-        print '\033[34m Reloading \033[00m' + filename
+        print('\033[34m Reloading \033[00m' + filename)
         try:
             if callable(altfn):
                 altfn()
@@ -38,7 +38,7 @@ def callback(x):
 def watch (filename,call=False):
     global future,finish,executor,altfn
     if not os.path.exists(filename): 
-        print 'Failed to start: invalid filename'
+        print('Failed to start: invalid filename')
         return None
     executor = ThreadPoolExecutor(max_workers=1)
     finish = False
@@ -58,7 +58,7 @@ def kill():
         myfile.write("\n")
     
     executor.shutdown(False)  # non-blocking
-    print '\033[34m Shutdown invoked \033[00m' + filename
+    print('\033[34m Shutdown invoked \033[00m' + filename)
     ipython.magic("autocall 0")
     
 def hist(glob = 'run *'):
@@ -66,10 +66,10 @@ def hist(glob = 'run *'):
     histvar  = os.popen("ipython -c 'history -g %s'"%glob).read()
     matches = re.findall(r'\d+/\d+:\s+(.*)\n',histvar)
     matches = [i for i in reversed(matches)][:7]
-    print 'Select command to run from history'
+    print('Select command to run from history')
     for i in enumerate(matches):
-        print i 
-    return eval( matches[ int(raw_input('Enter Selection:\n').strip())])     
+        print(i) 
+    return eval( matches[ int(input('Enter Selection:\n').strip())])     
     
     
 def start():
