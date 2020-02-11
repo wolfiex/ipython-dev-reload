@@ -35,7 +35,6 @@ https://anaconda.org/wolfiex/ipyreload
 				print 'hi, do this instead'
 				# to run another file use :
 				# ipython.magic("run " + filename)
-				return ipr.watch('test.py',callbackfn())
 
 			ipr.watch( 'test.py' , callbackfn)
 

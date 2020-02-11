@@ -32,7 +32,7 @@ def callback(x):
             else:
                 ipython.magic("run " + filename)
         except:None
-        watch(filename)
+        watch(filename,altfn)
     
     
 def watch (filename,call=False):
