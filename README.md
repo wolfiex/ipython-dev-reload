@@ -8,6 +8,7 @@ https://anaconda.org/wolfiex/ipyreload
 
 		conda install -c wolfiex ipyreload		
 		pip install --upgrade git+git://github.com/wolfiex/ipython-dev-reload/
+		python setup.py install
 
 
 ## Example use:
@@ -40,7 +41,24 @@ https://anaconda.org/wolfiex/ipyreload
 
 
 ```
+ ## of if using a module
+ ```
+import ipyReload as ipr
+import glob,os
 
+module = 'storytelling'
+
+def callbackfn():
+	print ('rerun')
+	# to run another file use :
+	ipython.magic(f"run -m {module}")
+
+
+
+for f in glob.glob(f'{module}/*.py'):
+    ipr.watch( f , callbackfn)
+ 
+ ```
 
 
 ## History - resubmit command
