@@ -15,6 +15,6 @@ setup(
       url="https://github.com/wolfiex/ipython-dev-reload",
       keywords= 'ipython reload'.split(' '),
       author='Dan Ellis',
-      author_email='daniel.ellis.research@gmail.com',
+      author_email='ipyreload (at) danielellisresearch.com',
       license='MIT',
       zip_safe=False)
