@@ -9,7 +9,7 @@ def readme():
 setup(
       name='ipyreload',
       packages=['ipyreload'],
-      version= 1.2,
+      version= 1.2.1,
       description='ipython productivity tools',
       long_description=readme(),
       url="https://github.com/wolfiex/ipython-dev-reload",
